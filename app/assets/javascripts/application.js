@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= jquery.js
-//= bootstrap.min.js
-//= jquery.dcjqaccordion.2.7.js
-//= jquery.scrollTo.min.js
-//= slidebars.min.js
-//= jquery.nicescroll.js
-//= respond.min.js
-//= common-scripts.js
+
+//= require jquery.dcjqaccordion.2.7
+//= require jquery.scrollTo.min
+//= require slidebars.min
+//= require jquery.nicescroll
+//= require respond.min
+//= require common-scripts
+//= require cable

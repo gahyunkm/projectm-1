@@ -11,6 +11,8 @@ gem 'annotate', '~> 2.7', '>= 2.7.1'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
