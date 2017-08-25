@@ -13,12 +13,15 @@
 ActiveRecord::Schema.define(version: 20170821101241) do
 
   create_table "project_members", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|
     t.string "projectName"
+    t.string "deadline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

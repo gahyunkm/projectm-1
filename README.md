@@ -5,13 +5,13 @@
     - Relationships
         has_many :project_members
     - Elements
-        id, email, password, first name, last name, mobile
+        email(string), password(string), first name(string), last name(string), mobile(integer)
 
 2. Projects
     - Relationships
         has_many :project_members
     - Elements
-        id, name(string), deadline
+        name(string), deadline(datetime)
 
 3. Project members
     - Relationships
