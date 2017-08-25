@@ -1,26 +1,74 @@
-<h2>Log in</h2>
+<div class="login-body">
+	<div class="container">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+		<form class="form-signin" action="">
+			<h2 class="form-signin-heading">sign in now</h2>
+			<div class="login-wrap">
+				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+					<%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "email" %>
+					<!-- <input type="text" class="form-control" placeholder="User ID" autofocus> -->
+					<%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "password"  %>
+					<!-- <input type="password" class="form-control" placeholder="Password"> -->
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+					<label class="checkbox">
+						<% if devise_mapping.rememberable? -%>
+								<%= f.check_box :remember_me %>
+								<%= f.label :remember_me %>
+						<% end -%>
+							<span class="pull-right">
+									<a data-toggle="modal" href="#myModal"> Forgot Password?</a>
+							</span>
+					</label>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+					<button class="btn btn-lg btn-login btn-block btn-xs" type="submit">Sign in</button>
+					<p>or you can sign in via social network</p>
+					<div class="login-social-link">
+							<a href="index.html" class="facebook btn-xs">
+									<i class="fa fa-facebook"></i>
+									<p class="facebook-txt-padding-P facebook-txt-padding-L">Facebook</p>
+							</a>
+							<a href="index.html" class="twitter btn-xs">
+									<i class="fa fa-twitter btn-xs"></i>
+								 <p class="twitter-txt-padding-P twitter-txt-padding-L">Twitter</p>
+							</a>
+					</div>
+					<div class="registration">
+							Don't have an account yet?
+							<a class="" href="/users/sign_up">
+									Create an account
+							</a>
+					</div>
+			</div>
 
-<%= render "devise/shared/links" %>
+				<!-- Modal -->
+				<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Forgot Password ?</h4>
+										</div>
+										<div class="modal-body">
+												<p>Enter your e-mail address below to reset your password.</p>
+												<input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+
+										</div>
+										<div class="modal-footer">
+												<button data-dismiss="modal" class="btn btn-default btn-xs" type="button">Cancel</button>
+												<button class="btn btn-success btn-xs" type="button">Submit</button>
+										</div>
+								</div>
+						</div>
+				</div>
+				<!-- modal -->
+
+		</form>
+
+	</div>
+	</div>
+	<!-- start: JavaScript-->
+	<!-- end: JavaScript-->
+  <% end %>
+
+  <!-- <%= render "devise/shared/links" %> -->

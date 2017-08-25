@@ -13,8 +13,8 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require popper
 //= require turbolinks
-
 //= require jquery.dcjqaccordion.2.7
 //= require jquery.scrollTo.min
 //= require slidebars.min
@@ -22,3 +22,4 @@
 //= require respond.min
 //= require common-scripts
 //= require cable
+//= require_tree .

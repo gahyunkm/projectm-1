@@ -32,9 +32,10 @@ Rails.application.routes.draw do
   resources :projects
   devise_for :users
 
-  root 'projects#index'
+  get 'home/index'
+  root 'home#index'
 
-  get 'index' => 'projects#index'
+  get 'projects/index' => 'projects#index'
   get 'calendar' => 'projects#calendar'
   get 'new' => 'projects#new'
 
